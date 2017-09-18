@@ -3,11 +3,21 @@ import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-public class StringsMakingAnagrams {
+public class Strings_MakingAnagrams {
+    // Outline
+    // Compare two strings and return how many deletions would be required to make them anagrams of each other.
+    // IE abc and cab is however aab and abc are not.
+    // To make aab and abc anagrams you would get rid of an 'a' from the first.
+    // Then a 'c' from the second.
+    // Making them ab and ab.
     // Algorithm
     // 1. Loop through and count the occurrences of each letter in the string, IE abbc = 1 2 1 0 0 0....
     // 2. Sum the difference between the counts of each occuring letter between string, IE a = 2, a = 1, diff = 1.
     // 3. Return the total number of differences to know how many deletions need to occur.
+    // Input
+    // String, String.
+    // Output
+    // Integer.
     public static int numberNeeded(String first, String second) {
         int[] firstAlpha = new int[26];
         int[] secondAlpha = new int[26];
